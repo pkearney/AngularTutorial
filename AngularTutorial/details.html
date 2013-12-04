@@ -1,0 +1,24 @@
+﻿<h2>{{action}} Todo</h2>
+
+<form name="form" class="form-horizontal">
+     <div class="form-group" ng-class="{'has-error' : form.Text.$invalid}">
+        <label for="Text">To Do</label>
+        <input type="Text" ng-model="item.Text" class="form-control input-sm" name="Text" id="Text" placeholder="">
+    </div>  
+    <div class="form-group" ng-class="{'has-error' : form.DueDate.$invalid}">
+        <label for="DueDate" >Due</label>
+        <input type="Text" ng-model="item.DueDate" class="form-control input-sm" name="DueDate" id="DueDate" placeholder="">
+    </div>
+    <div  class="form-group" ng-class="{'has-error' : form.Priority.$invalid}">
+        <label for="Priority">Priority</label>
+        <input type="number" ng-model="item.Priority" name="Priority" class="form-control" id="Priority">
+    </div> 
+         
+    <div class="form-control-static">
+            <button ng-click="save()" type="submit" class="btn btn-primary">
+                {{action}}
+            </button>
+            <a href="#/" class="btn btn-default">Cancel</a>
+        </div>      
+</form>
+
